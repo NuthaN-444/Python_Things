@@ -7,7 +7,7 @@ emojis = {'r':'🪨' , 'p':'📃' , 's':'✂️'}
 
 # ---Here in Tuple stores characters for Rock paper scissors ---
 choices = ('r','p','s')
-name = input("Enter Your Name -->  ")
+name = input("Enter Your Name -->  ").upper()
 
 while True:
     
