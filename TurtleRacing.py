@@ -63,7 +63,7 @@ def init_turtle():
 
 
 
-racers = get_number_of_racers() # asking user to enter the number of racer
+racers = get_number_of_racers() # it stores number of turtles
 init_turtle()                   #calling the creating screen function
 random.shuffle(COLORS)          # shuffling The colors list
 colors = COLORS[:racers]        #taking colors based on number of racers
