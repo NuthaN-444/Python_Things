@@ -2,7 +2,7 @@
 import random
 
 
-name = input("Enter Your Name >>> ")
+name = input("Enter Your Name >>> ").upper()
 blocks = [['.','.','.'],['.','.','.'],['.','.','.']]           # Multi List To Store The Data Of both Players
 print("__________________________________________")
 userSymbol = input("Enter The Symbol (X or O) >>> ").upper()   #Taking (X or O ) Symbol From User 
