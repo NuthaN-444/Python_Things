@@ -1,42 +1,31 @@
 from tkinter import*
 from tkinter import messagebox
 
-data = {
-    
-}
-
-
 
 def submit():
     Label(root,text="Successfully submitted.",fg='green',font=("#1b263b",20),bg='#e0e1dd').place(x=840,y=620)   #Text
-    UserName = inputUserName.get()
-    UserPassword = inputUserPassword.get()
-    PlatformName = inputPlatformName.get()
-    if UserName in data:
-        data["Name"]=UserName
-        data["Password"]=UserPassword
-        data["platform"]=PlatformName
+    UserName = inputUserName.get()    #getting data
+    UserPassword = inputUserPassword.get()    #getting data
+    PlatformName = inputPlatformName.get()     #getting data
 
-        print("User Name: ",UserName)
-        print("password : ",UserPassword)
-        print("platform  : ",PlatformName)
+    print("User Name: ",UserName)
+    print("password : ",UserPassword)
+    print("platform  : ",PlatformName)
 
     try:
-        with open("datauser.txt","a") as file:
+        with open("datauser.txt","a") as file:    # storing data in the file
             file.write(f"UserName : {UserName}\n")
             file.write(f"PassWord : {UserPassword}\n")
             file.write(f"Platform : {PlatformName}\n\n")
-    except Exception as e:
+    except Exception as e:    # incase file couldn't open
         messagebox.showinfo("Sorry ! We can't Store Your Data due To Some Reason.")
 
-
-
-
+    
     messagebox.showinfo('Submitted', "Your data is submitted successfully!")    # popup
 
 
 
-
+# reset the data in entry field
 def reset():
     Label(root,text="Successfully Reset.     ",fg='red',font=("#1b263b",20),bg='#e0e1dd').place(x=840,y=620)#Text
     inputUserName.delete(0, END)
@@ -73,7 +62,7 @@ textUserPassword.place(x=650,y=400)
 inputUserPassword = Entry(root,show="*",fg='#415a77',font=('#415a77',20),bg='white',highlightcolor='white',highlightthickness=1)
 inputUserPassword.place(x=840,y=400)
 
-    #Address
+    #Address input
 textPlatform = Label(root,text="Platform : ",fg='#1b263b',font=('#1b263b',20),bg='#e0e1dd')#Text
 textPlatform.place(x=665,y=500)
 inputPlatformName = Entry(root,text='',fg='#415a77',font=('#415a77',20),bg='white',highlightcolor='white',highlightthickness=1)
