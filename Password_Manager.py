@@ -13,6 +13,7 @@ def submit():
     print("platform  : ",PlatformName)
 
     try:
+        #Note : Here Below Give Your file Name
         with open("datauser.txt","a") as file:    # storing data in the file
             file.write(f"UserName : {UserName}\n")
             file.write(f"PassWord : {UserPassword}\n")
